@@ -1,4 +1,4 @@
-package com.company;
+package com.company.tcp.Client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,6 +14,7 @@ public class Main {
         int portNumber = Integer.parseInt(args[1]);
 
         try {
+            System.out.println("TCP client: %s:%d".formatted(hostName,portNumber));
             Socket echoSocket = new Socket(hostName, portNumber);
             PrintWriter out =
                     new PrintWriter(echoSocket.getOutputStream(), true);
